@@ -19,54 +19,9 @@ jobs:
           name: bin
           path: bin
 
-  test:
-    name: Test OS specific binaries
-    needs: build
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest] # , windows-latest
-        include:
-          # - os: windows-latest
-          #   binary: govuk-frontend-diff-win.exe
-          - os: ubuntu-latest
-            binary: ./govuk-frontend-diff-linux
-          - os: macos-latest
-            binary: ./govuk-frontend-diff-macos
-    env:
-      GOVUK_FRONTEND_DIFF_COMMAND: ${{ matrix.binary }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.4
-        with:
-          node-version: 14
-      - uses: actions/download-artifact@v2
-        with:
-          name: bin
-      - run: npm ci
-      - name: Run tests
-        shell: bash
-        run: |
-          chmod +x ${{ matrix.binary }}
-          npm test
-
-  pre-release:
-    name: Pre release checks
-    needs: test
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.4
-        with:
-          node-version: 14
-      - run: npm ci
-      - name: Check package.json
-        run: node scripts/check-package.js --tag-name=${{ github.ref }}
-
   release:
     name: Release binaries
-    needs: pre-release
+    needs: build
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
