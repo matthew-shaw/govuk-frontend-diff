@@ -47,7 +47,6 @@ jobs:
           set -x
           assets=()
           for asset in ./bin/*; do
-            assets+=("-a" "$asset")
+            assets+=("$asset")
           done
-          githubref=${{ github.ref }}
-          hub release edit "${assets[@]}" -m "${githubref##*/}" "${githubref##*/}"
+          gh release upload ${{ github.ref }} "${assets[@]}"
