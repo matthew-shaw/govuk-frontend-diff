@@ -21,14 +21,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/surevine/govuk-frontend-diff.git"
+    "url": "git+https://github.com/matthew-shaw/govuk-frontend-diff.git"
   },
   "author": "Andy Mantell <contact@andymantell.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/surevine/govuk-frontend-diff/issues"
+    "url": "https://github.com/matthew-shaw/govuk-frontend-diff/issues"
   },
-  "homepage": "https://github.com/surevine/govuk-frontend-diff#readme",
+  "homepage": "https://github.com/matthew-shaw/govuk-frontend-diff#readme",
   "dependencies": {
     "@markedjs/html-differ": "^3.0.4",
     "@starptech/prettyhtml": "^0.10.0",

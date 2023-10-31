@@ -100,7 +100,7 @@ const { argv } = yargs
     - Have /component/<component-name> and /template routes which accept data POSTed as JSON
     - Respond with rendered html
 
-    A reference server and more detailed instructions can be found in the readme at https://github.com/surevine/govuk-frontend-diff
+    A reference server and more detailed instructions can be found in the readme at https://github.com/matthew-shaw/govuk-frontend-diff
     `
   )
   .demandCommand(1);

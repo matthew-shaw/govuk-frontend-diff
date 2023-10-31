@@ -1,8 +1,8 @@
 # govuk-frontend-diff
 
-![Pipeline status](https://github.com/surevine/govuk-frontend-diff/workflows/Pipeline/badge.svg)
+![Pipeline status](https://github.com/matthew-shaw/govuk-frontend-diff/workflows/Pipeline/badge.svg)
 [![version](https://img.shields.io/npm/v/govuk-frontend-diff.svg?style=flat-square)](https://www.npmjs.com/package/govuk-frontend-diff)
-[![MIT License](https://img.shields.io/npm/l/govuk-frontend-diff.svg?style=flat-square)](https://github.com/surevine/govuk-frontend-diff/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/govuk-frontend-diff.svg?style=flat-square)](https://github.com/matthew-shaw/govuk-frontend-diff/blob/main/LICENSE)
 
 Command line tool to compare a custom implementation of govuk-frontend templates with the reference Nunjucks.
 
@@ -18,7 +18,7 @@ The tools works by rendering the govuk-frontend Nunjucks templates using the [ex
 
 ### Using the binaries
 
-Binaries for OSX, Linux and Windows are provided. The [latest binaries can be found here](https://github.com/surevine/govuk-frontend-diff/releases/latest).
+Binaries for OSX, Linux and Windows are provided. The [latest binaries can be found here](https://github.com/matthew-shaw/govuk-frontend-diff/releases/latest).
 
 Using the binaries does not require NodeJS to be installed.
 
@@ -58,7 +58,7 @@ Commands:
 
                              A reference server and more detailed instructions
                              can be found in the readme at
-                             https://github.com/surevine/govuk-frontend-diff
+                             https://github.com/matthew-shaw/govuk-frontend-diff
 
 
 Options:
