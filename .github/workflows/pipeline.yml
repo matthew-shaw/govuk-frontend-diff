@@ -49,4 +49,5 @@ jobs:
           for asset in ./bin/*; do
             assets+=("$asset")
           done
-          gh release upload ${{ github.ref }} "${assets[@]}"
+          githubref=${{ github.ref }}
+          gh release upload "${githubref##*/}" "${assets[@]}"
