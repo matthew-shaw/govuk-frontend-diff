@@ -12,6 +12,10 @@
 
 ## Releases
 
+### v2.0.0
+
+- Version bump following GOV.UK Frontend v5.0.0 full release
+
 ### v2.0.0-rc.1
 
 #### Breaking changes

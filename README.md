@@ -34,7 +34,7 @@ As with any cli tool published to the npm registry, you can simply run `npx govu
 
 ## Compatibility
 
-Please note this tool will only work with versions of govuk-frontend later than `v3.0.0` (July 2019) wherein the components were moved underneath a `/govuk` subfolder. See https://github.com/alphagov/govuk-frontend/releases/tag/v3.0.0
+Please note this tool will only work with versions of govuk-frontend later than `v5.0.0` (December 2023).
 
 ## Usage
 
