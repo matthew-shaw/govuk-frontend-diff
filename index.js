@@ -42,13 +42,13 @@ async function performDiff(url, version, options) {
 
 const { argv } = yargs
   .scriptName('govuk-frontend-diff')
-  .usage('Usage: $0 http://localhost:3000 --govuk-frontend-version=v5.4.0')
+  .usage('Usage: $0 http://localhost:3000 --govuk-frontend-version=v5.6.0')
   .usage(
-    'Usage: $0 http://localhost:3000 --govuk-frontend-version=v5.4.0 --exclude=page-template'
+    'Usage: $0 http://localhost:3000 --govuk-frontend-version=v5.6.0 --exclude=page-template'
   )
   .option('govuk-frontend-version', {
     describe: `Version of govuk-frontend to test against.    
-    This will normally be references to tags like v5.4.0 but this will accept any commit-ish such as branches or even commit identifiers.
+    This will normally be references to tags like v5.6.0 but this will accept any commit-ish such as branches or even commit identifiers.
     If not specified, the most recent govuk-frontend tag will be used.`,
   })
   .option('force-refresh', {

@@ -39,8 +39,8 @@ Please note this tool will only work with versions of govuk-frontend later than 
 ## Usage
 
 ```
-Usage: govuk-frontend-diff http://localhost:3000 --govuk-frontend-version=v5.4.0
-Usage: govuk-frontend-diff http://localhost:3000 --govuk-frontend-version=v5.4.0
+Usage: govuk-frontend-diff http://localhost:3000 --govuk-frontend-version=v5.6.0
+Usage: govuk-frontend-diff http://localhost:3000 --govuk-frontend-version=v5.6.0
 --exclude=page-template
 
 Commands:
@@ -65,7 +65,7 @@ Options:
   --help                    Show help                                  [boolean]
   --version                 Show version number                        [boolean]
   --govuk-frontend-version  Version of govuk-frontend to test against.
-                            This will normally be references to tags like v5.4.0
+                            This will normally be references to tags like v5.6.0
                             but this will accept any commit-ish such as branches
                             or even commit identifiers.
                             If not specified, the most recent govuk-frontend tag
@@ -157,7 +157,7 @@ def component(component):
     # data['params] are the params that will be passed to the macro
     # Returns an html response that is just the template in question - no wrapping <html>, <body> elements etc
     return render_template_string('''
-        {{% from "govuk_frontend_jinja/components/" + component + "/macro.html" import govuk{macro_name} %}}
+        {{% from "govuk_frontend_jinja/components/" ~ component ~ "/macro.html" import govuk{macro_name} %}}
         {{{{ govuk{macro_name}(params) }}}}
     '''.format(macro_name=data['macro_name']),
         component=component,
